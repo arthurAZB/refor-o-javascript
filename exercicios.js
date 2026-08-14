@@ -112,7 +112,25 @@ else {console.log("Obesidade");}
 // Compare as jogadas e mostre quem ganhou.
 // ------------------------------------------------------------
 
+let minhaJogada = "pedra";
 
+let opcoes = ['pedra', 'papel', 'tesoura'];
+let computador = opcoes[Math.floor(Math.random() * 3)];
+
+console.log("Sua jogada: " + minhaJogada);
+console.log("Jogada do computador: " + computador);
+
+if (minhaJogada === computador) {
+    console.log("Empate!");
+} else if (
+    (minhaJogada === "pedra" && computador === "tesoura") ||
+    (minhaJogada === "papel" && computador === "pedra") ||
+    (minhaJogada === "tesoura" && computador === "papel")
+) {
+    console.log("Você ganhou!");
+} else {
+    console.log("Computador ganhou!");
+}
 
 // EXERCÍCIO 8 - Sistema de notas
 // Crie uma variável com uma nota de 0 a 10.
@@ -123,8 +141,6 @@ else {console.log("Obesidade");}
 //   4 e 3    = "D"
 //   2, 1, 0  = "F"
 // ------------------------------------------------------------
-
-
 
 // ============================================================
 //  BLOCO 3 - LOOPS (for, while)
