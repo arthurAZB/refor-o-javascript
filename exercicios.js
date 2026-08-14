@@ -43,7 +43,11 @@ console.log ("F = C: "+ (C * 9/5 + 32))
 // Se numero % 2 === 0, é par.
 // ------------------------------------------------------------
 
+let numero3 = 15;
 
+if (numero3 % 2 === 0) 
+{console.log(numero3 + " é par");}
+else {console.log(numero3 + " é impar");}
 
 
 // EXERCÍCIO 4 - Média de notas
