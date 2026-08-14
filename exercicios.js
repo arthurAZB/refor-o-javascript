@@ -57,8 +57,15 @@ else {console.log(numero3 + " é impar");}
 // Se não, mostre "Reprovado".
 // ------------------------------------------------------------
 
+let nota1 = 8;
+let nota2 = 6.7;
+let nota3 = 7.5;
 
+let media = (nota1 + nota2 + nota3) / 3;
 
+if (media >= 7) 
+{console.log("Aprovado");} 
+else {console.log("Reprovado");}
 
 // ============================================================
 //  BLOCO 2 - CONDICIONAIS (if/else, switch)
@@ -70,7 +77,6 @@ else {console.log(numero3 + " é impar");}
 // Se for >= 18, mostre "Maior de idade".
 // Se não, mostre "Menor de idade".
 // ------------------------------------------------------------
-
 
 
 
