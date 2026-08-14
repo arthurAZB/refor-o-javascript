@@ -78,7 +78,11 @@ else {console.log("Reprovado");}
 // Se não, mostre "Menor de idade".
 // ------------------------------------------------------------
 
+let idade = 22;
 
+if (idade >= 18) 
+{console.log("Maior de idade");} 
+else {console.log("Menor de idade");}
 
 // EXERCÍCIO 6 - Calculadora de IMC
 // Crie variáveis para peso (em kg) e altura (em metros).
