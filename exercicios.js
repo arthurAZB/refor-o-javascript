@@ -142,6 +142,20 @@ if (minhaJogada === computador) {
 //   2, 1, 0  = "F"
 // ------------------------------------------------------------
 
+let nota = 8.5;
+
+if (nota >= 9) {
+    console.log("nota: A");
+} else if (nota >= 7) {
+    console.log("nota: B");
+} else if (nota >= 5) {
+    console.log("nota: C");
+} else if (nota >= 3) {
+    console.log("nota: D");
+} else {
+    console.log("nota: F");
+}
+
 // ============================================================
 //  BLOCO 3 - LOOPS (for, while)
 // ============================================================
