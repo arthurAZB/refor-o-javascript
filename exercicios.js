@@ -171,7 +171,11 @@ if (nota >= 9) {
 //   ... até "5 x 10 = 50"
 // ------------------------------------------------------------
 
+let numero = 5;
 
+for (let i = 1; i <= 10; i++) {
+    console.log(numero + " x " + i + " = " + (numero * i));
+}
 
 // EXERCÍCIO 10 - Contagem regressiva
 // Use um for para contar de 10 até 0.
