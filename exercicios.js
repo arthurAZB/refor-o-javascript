@@ -94,8 +94,14 @@ else {console.log("Menor de idade");}
 //   30 ou mais     = "Obesidade"
 // ------------------------------------------------------------
 
+let peso = 75;
+let altura = 1.70;
+let imc = peso / (altura * altura);
 
-
+if (imc < 18.5) {console.log("Abaixo do peso");} 
+else if (imc <= 24.9) {console.log("Peso normal");} 
+else if (imc <= 29.9) {console.log("Sobrepeso");} 
+else {console.log("Obesidade");}
 
 // EXERCÍCIO 7 - Pedra, papel e tesoura
 // Crie uma variável com sua jogada ("pedra", "papel" ou "tesoura").
@@ -105,7 +111,6 @@ else {console.log("Menor de idade");}
 //   let computador = opcoes[Math.floor(Math.random() * 3)]
 // Compare as jogadas e mostre quem ganhou.
 // ------------------------------------------------------------
-
 
 
 
@@ -121,10 +126,10 @@ else {console.log("Menor de idade");}
 
 
 
-
 // ============================================================
 //  BLOCO 3 - LOOPS (for, while)
 // ============================================================
+
 
 
 // EXERCÍCIO 9 - Tabuada
@@ -138,13 +143,11 @@ else {console.log("Menor de idade");}
 
 
 
-
 // EXERCÍCIO 10 - Contagem regressiva
 // Use um for para contar de 10 até 0.
 // Mostre cada número no console.
 // No final, mostre "Feliz Ano Novo!" (ou qualquer mensagem).
 // ------------------------------------------------------------
-
 
 
 
@@ -157,7 +160,6 @@ else {console.log("Menor de idade");}
 
 
 
-
 // EXERCÍCIO 12 - Adivinhe o número
 // O computador escolhe um número aleatório de 1 a 10:
 //   let secreto = Math.floor(Math.random() * 10) + 1
@@ -166,7 +168,6 @@ else {console.log("Menor de idade");}
 // Quando acertar, mostre "Parabéns! Acertou!"
 // Dica: use prompt() para pedir o palpite do usuário.
 // ------------------------------------------------------------
-
 
 
 
@@ -184,7 +185,6 @@ else {console.log("Menor de idade");}
 
 
 
-
 // EXERCÍCIO 14 - Número primo
 // Crie uma função chamada "ehPrimo" que recebe um número
 // e retorna true se for primo, false se não for.
@@ -192,7 +192,6 @@ else {console.log("Menor de idade");}
 // Dica: use um for de 2 até numero-1 e verifique se
 // algum divide o número sem resto (numero % i === 0).
 // ------------------------------------------------------------
-
 
 
 
@@ -206,7 +205,6 @@ else {console.log("Menor de idade");}
 
 
 
-
 // EXERCÍCIO 16 - Contar vogais
 // Crie uma função chamada "contarVogais" que recebe uma
 // palavra e retorna quantas vogais ela tem.
@@ -214,7 +212,6 @@ else {console.log("Menor de idade");}
 // Dica: transforme em minúscula com .toLowerCase()
 // e verifique cada letra com um for.
 // ------------------------------------------------------------
-
 
 
 
@@ -232,7 +229,6 @@ else {console.log("Menor de idade");}
 
 
 
-
 // EXERCÍCIO 18 - Maior e menor
 // Crie um array com 8 números diferentes.
 // Encontre o maior e o menor número do array.
@@ -240,7 +236,6 @@ else {console.log("Menor de idade");}
 // Dica: use Math.max(...array) e Math.min(...array)
 // Ou tente fazer com um for (mais desafiador!).
 // ------------------------------------------------------------
-
 
 
 
@@ -253,14 +248,12 @@ else {console.log("Menor de idade");}
 
 
 
-
 // EXERCÍCIO 20 - Filtrar pares
 // Crie um array com os números de 1 a 20.
 // Filtre apenas os números pares e guarde num novo array.
 // Mostre o array de pares no console.
 // Dica: use .filter(function(numero) { return numero % 2 === 0 })
 // ------------------------------------------------------------
-
 
 
 
@@ -281,7 +274,6 @@ else {console.log("Menor de idade");}
 
 
 
-
 // EXERCÍCIO 22 - Contador
 // Crie no HTML: um <h1> com o número 0, e dois botões (+ e -).
 // Ao clicar em "+", o número aumenta 1.
@@ -292,7 +284,6 @@ else {console.log("Menor de idade");}
 
 
 
-
 // EXERCÍCIO 23 - Mostrar e esconder
 // Crie no HTML: um botão "Mostrar/Esconder" e um <div> com
 // um texto qualquer dentro.
@@ -300,7 +291,6 @@ else {console.log("Menor de idade");}
 // Dica: use classList.toggle() com uma classe CSS que tenha
 // display: none
 // ------------------------------------------------------------
-
 
 
 
@@ -324,7 +314,6 @@ else {console.log("Menor de idade");}
 
 
 
-
 // EXERCÍCIO 26 - Quiz de perguntas
 // Crie um quiz com 5 perguntas de múltipla escolha.
 // Mostre uma pergunta por vez na página.
@@ -332,7 +321,6 @@ else {console.log("Menor de idade");}
 // Dica: guarde as perguntas num array de objetos:
 //   { pergunta: "...", opcoes: ["a", "b", "c"], correta: 1 }
 // ------------------------------------------------------------
-
 
 
 
@@ -344,7 +332,6 @@ else {console.log("Menor de idade");}
 // Dica: crie uma string com os caracteres possíveis e use
 // Math.random() para escolher caracteres aleatórios.
 // ------------------------------------------------------------
-
 
 
 
