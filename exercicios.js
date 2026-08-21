@@ -436,12 +436,6 @@ btnVerde.addEventListener("click", function() {
 // e atualize o textContent do <h1> a cada clique.
 // ------------------------------------------------------------
 
-// EXERCÍCIO 22 - Contador
-// Crie no HTML: um <h1> com o número 0, e dois botões (+ e -).
-// Ao clicar em "+", o número aumenta 1.
-// Ao clicar em "-", o número diminui 1.
-// ------------------------------------------------------------
-
 let contador = 0;
 
 const elementoValor = document.getElementById("valor");
