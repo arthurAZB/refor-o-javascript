@@ -196,7 +196,14 @@ console.log("Feliz Ano Novo!");
 // Exemplo: se N = 5, resultado = 1+2+3+4+5 = 15
 // ------------------------------------------------------------
 
+let N = 5;
+let soma = 0;
 
+for (let i = 1; i <= N; i++) {
+    soma += i; 
+}
+
+console.log("A soma de 1 até " + N + " é: " + soma);
 
 // EXERCÍCIO 12 - Adivinhe o número
 // O computador escolhe um número aleatório de 1 a 10:
@@ -207,7 +214,21 @@ console.log("Feliz Ano Novo!");
 // Dica: use prompt() para pedir o palpite do usuário.
 // ------------------------------------------------------------
 
+let secreto = Math.floor(Math.random() * 10) + 1;
 
+let palpite = 0;
+
+while (palpite !== secreto) {
+    palpite = Number(prompt("Adivinhe o número de 1 a 10:"));
+
+    if (palpite < secreto) {
+        alert("O número secreto é MAIOR!");
+    } else if (palpite > secreto) {
+        alert("O número secreto é MENOR!");
+    } else {
+        alert("Parabéns! Acertou!");
+    }
+}
 
 // ============================================================
 //  BLOCO 4 - FUNÇÕES
@@ -221,7 +242,14 @@ console.log("Feliz Ano Novo!");
 // Exemplo: saudacao("Maria") retorna "Olá, Maria!"
 // ------------------------------------------------------------
 
+function saudacao(nome) {
+    return "Olá, " + nome + "!";
+}
 
+let mensagem = saudacao("Maria");
+console.log(mensagem);
+
+console.log(saudacao("João"));
 
 // EXERCÍCIO 14 - Número primo
 // Crie uma função chamada "ehPrimo" que recebe um número
@@ -231,7 +259,25 @@ console.log("Feliz Ano Novo!");
 // algum divide o número sem resto (numero % i === 0).
 // ------------------------------------------------------------
 
+function ehPrimo(numero) {
+    
+    if (numero <= 1) {
+        return false;
+    }
 
+    for (let i = 2; i < numero; i++) {
+        if (numero % i === 0) {
+            return false; 
+        }
+    }
+
+    return true;
+}
+
+console.log(ehPrimo(7));  
+console.log(ehPrimo(10)); 
+console.log(ehPrimo(13)); 
+console.log(ehPrimo(1));  
 
 // EXERCÍCIO 15 - Inverter string
 // Crie uma função chamada "inverter" que recebe uma string
@@ -241,7 +287,13 @@ console.log("Feliz Ano Novo!");
 // inverter, e join('') para voltar a ser string.
 // ------------------------------------------------------------
 
+function inverter(texto) {
+    return texto.split('').reverse().join('');
+}
 
+console.log(inverter("javascript"));
+console.log(inverter("desenvolvimento"));
+console.log(inverter("12345"));
 
 // EXERCÍCIO 16 - Contar vogais
 // Crie uma função chamada "contarVogais" que recebe uma
@@ -251,7 +303,26 @@ console.log("Feliz Ano Novo!");
 // e verifique cada letra com um for.
 // ------------------------------------------------------------
 
+// EXERCÍCIO 16 - Contar vogais
+// Crie uma função chamada "contarVogais" que recebe uma
+// palavra e retorna quantas vogais ela tem.
+// ------------------------------------------------------------
 
+function contarVogais(palavra) {
+    let contador = 0;
+    let palavraMinuscula = palavra.toLowerCase();
+    let vogais = "aeiouáéíóúãõâêô";
+
+    for (let i = 0; i < palavraMinuscula.length; i++) {
+        if (vogais.includes(palavraMinuscula[i])) {
+            contador++;
+        }
+    }
+
+    return contador;
+}
+
+console.log(contarVogais("javascript"));
 
 // ============================================================
 //  BLOCO 5 - ARRAYS
@@ -265,7 +336,19 @@ console.log("Feliz Ano Novo!");
 // Remova o último item com pop() e mostre a lista novamente.
 // ------------------------------------------------------------
 
+let listaCompras = [];
 
+listaCompras.push("Arroz");
+listaCompras.push("Feijão");
+listaCompras.push("Leite");
+listaCompras.push("Ovos");
+listaCompras.push("Café");
+
+console.log("Lista completa:", listaCompras);
+
+listaCompras.pop();
+
+console.log("Lista após remover o último item:", listaCompras);
 
 // EXERCÍCIO 18 - Maior e menor
 // Crie um array com 8 números diferentes.
@@ -275,7 +358,14 @@ console.log("Feliz Ano Novo!");
 // Ou tente fazer com um for (mais desafiador!).
 // ------------------------------------------------------------
 
+let numeros = [15, 42, 8, 23, 99, 4, 16, 42];
 
+let maior = Math.max(...numeros);
+let menor = Math.min(...numeros);
+
+console.log("Array de números:", numeros);
+console.log("Maior número:", maior);
+console.log("Menor número:", menor);
 
 // EXERCÍCIO 19 - Ordenar nomes
 // Crie um array com 6 nomes de pessoas.
@@ -283,8 +373,16 @@ console.log("Feliz Ano Novo!");
 // Depois ordene ao contrário (Z até A) e mostre também.
 // Dica: use .sort() e .reverse()
 // ------------------------------------------------------------
+// EXERCÍCIO 19 - Ordenar nomes
+// ------------------------------------------------------------
 
+let nomes = ["Carlos", "Ana", "Beatriz", "Eduardo", "Daniela", "Felipe"];
 
+nomes.sort();
+console.log("Ordem alfabética (A-Z):", nomes);
+
+nomes.reverse();
+console.log("Ordem inversa (Z-A):", nomes);
 
 // EXERCÍCIO 20 - Filtrar pares
 // Crie um array com os números de 1 a 20.
@@ -293,7 +391,11 @@ console.log("Feliz Ano Novo!");
 // Dica: use .filter(function(numero) { return numero % 2 === 0 })
 // ------------------------------------------------------------
 
+let numerose = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
+let pares = numerose.filter(numero => numero % 2 === 0);
+
+console.log("Números pares:", pares);
 
 // ============================================================
 //  BLOCO 6 - DOM (Manipulação da página)
@@ -310,7 +412,21 @@ console.log("Feliz Ano Novo!");
 // Dica: document.body.style.backgroundColor = 'red'
 // ------------------------------------------------------------
 
+const btnVermelho = document.getElementById("btn-vermelho");
+const btnAzul = document.getElementById("btn-azul");
+const btnVerde = document.getElementById("btn-verde");
 
+btnVermelho.addEventListener("click", function() {
+    document.body.style.backgroundColor = "red";
+});
+
+btnAzul.addEventListener("click", function() {
+    document.body.style.backgroundColor = "blue";
+});
+
+btnVerde.addEventListener("click", function() {
+    document.body.style.backgroundColor = "green";
+});
 
 // EXERCÍCIO 22 - Contador
 // Crie no HTML: um <h1> com o número 0, e dois botões (+ e -).
@@ -320,7 +436,27 @@ console.log("Feliz Ano Novo!");
 // e atualize o textContent do <h1> a cada clique.
 // ------------------------------------------------------------
 
+// EXERCÍCIO 22 - Contador
+// Crie no HTML: um <h1> com o número 0, e dois botões (+ e -).
+// Ao clicar em "+", o número aumenta 1.
+// Ao clicar em "-", o número diminui 1.
+// ------------------------------------------------------------
 
+let contador = 0;
+
+const elementoValor = document.getElementById("valor");
+const btnMais = document.getElementById("btn-mais");
+const btnMenos = document.getElementById("btn-menos");
+
+btnMais.addEventListener("click", function() {
+    contador++;
+    elementoValor.textContent = contador;
+});
+
+btnMenos.addEventListener("click", function() {
+    contador--;
+    elementoValor.textContent = contador;
+});
 
 // EXERCÍCIO 23 - Mostrar e esconder
 // Crie no HTML: um botão "Mostrar/Esconder" e um <div> com
@@ -330,12 +466,18 @@ console.log("Feliz Ano Novo!");
 // display: none
 // ------------------------------------------------------------
 
+const btnToggle = document.getElementById("btn-toggle");
+const caixaTexto = document.getElementById("caixa-texto");
 
+btnToggle.addEventListener("click", function() {
+    caixaTexto.classList.toggle("escondido");
+});
 
 // EXERCÍCIO 24 - Lista de tarefas
 // Esse exercício é a atividade principal!
 // Abra o arquivo script.js da atividade e complete os níveis.
 // ------------------------------------------------------------
+
 
 
 // ============================================================
